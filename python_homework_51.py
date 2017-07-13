@@ -8,17 +8,14 @@ students = [{"name": "Mark", "surname": "Parks", "gender": "male", "exp": True, 
 
 
 def best_student():
-    best_students = []
     for student in students:
         average_mark_homework = sum(student["marks"]) / len(student["marks"])
         integral_student_mark = 0.6 * average_mark_homework + 0.6 * student["exam_mark"]  
         integral_marks = {"name": student["name"],
                               "surname": student["surname"],
                               "integral_mark": integral_student_mark}
-        print(integral_marks)
     best_mark = max((integral_marks["integral_mark"]) for mark in integral_marks)
     print("Лучший студент: {0} {1} с интегральной оценкой {2}".format(student["name"], student["surname"], best_mark))
-
 
 
 def average_mark_group_homework():
