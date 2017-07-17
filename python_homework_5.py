@@ -25,7 +25,7 @@ def best_student():
                                   "integral_mark": integral_student_mark})  # Пополнение списка лучших студентов
     if len(best_students) == 1:  # Вывод одного лучшего студента
         print("Лучший студент: {0} {1} с баллом {2}".format(student["name"], student["surname"], round(student["integral_mark"]), 3))
-    if len(best_students) > 1:  # Вывод нескольких оучших студентов
+    if len(best_students) > 1:  # Вывод нескольких лучших студентов
         print("Лучшие студенты: ", end='')
         for student in best_students:
             print("{} {}".format(student["name"], student["surname"]), end=", ")
